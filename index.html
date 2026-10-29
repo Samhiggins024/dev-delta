@@ -1,17 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lab-delta</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab|delta</title>
+  </head>
+  <body>
+    <form id="profileForm">
+      <label for="name">name</label>
+      <input id="nameInput" />
+      <br />
 
-    <select id="favorite"></select>
-    <option disabled></option>select your favorite!
-    
+      <label for="favorite">favorite</label>
+      <select id="favoriteInput">
+        <option>select favorite!</option>
+      </select>
 
-<script src="assets/js/script.js"></script>
-    
-</body>
+      <br />
+      <label for="comment">comments</label>
+      <textarea id="commentInput"></textarea>
+
+			<br /> 
+
+			<button id="btnCreateProfile">create my profile</button>
+    </form>
+
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

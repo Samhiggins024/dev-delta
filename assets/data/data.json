@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Coffee",
+    "emoji": "☕"
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "emoji": "🍕"
+  },
+  {
+    "id": 3,
+    "name": "Tacos",
+    "emoji": "🌮"
+  }
+]
