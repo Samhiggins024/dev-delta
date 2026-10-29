@@ -6,25 +6,29 @@
     <title>lab|delta</title>
   </head>
   <body>
-    <form id="profileForm">
-      <label for="name">name</label>
+    <main>
+      <form id="profile-form">
+      <label for="nameInput">name</label>
       <input id="nameInput" />
       <br />
 
-      <label for="favorite">favorite</label>
+      <label for="favoriteInput">favorite</label>
       <select id="favoriteInput">
         <option>select favorite!</option>
       </select>
 
       <br />
-      <label for="comment">comments</label>
+      <label for="commentInput">comments</label>
       <textarea id="commentInput"></textarea>
 
 			<br /> 
 
-			<button id="btnCreateProfile">create my profile</button>
-    </form>
-
+			<button type="submit">create my profile</button>
+      </form>
+      <p id="profile-output"> Your profile will display here.</p>
+    
+      <img id="dog-image" alt="A Dog" /> 
+    </main>  
     <script src="assets/js/script.js"></script>
   </body>
 </html>
