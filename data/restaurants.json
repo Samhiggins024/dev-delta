@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Texas RoadHouse",
+    "category": "American",
+    "rating": 4.7,
+    "city": "Florence al, Decatur al, Huntsville al, Madison al",
+    "notes": "Rolls!",
+    "createdBy": "Sam"
+  },
+  {
+    "id": 2,
+    "name": "Taco Spot",
+    "category": "Mexican",
+    "rating": 4.8,
+    "city": "Florence al",
+    "notes": "Birria and al pastor tacos! 10$ for 4 street tacos",
+    "createdBy": "Sam"
+  },
+  {
+    "id": 3,
+    "name": "Steak n Shake",
+    "category": "Fast food Burger ",
+    "rating": 4.5,
+    "city": "Decatur al, Hunstville al",
+    
+    "notes": "100% beef burgers. beef tallow fries. best milkshake",
+    "createdBy": "Sam"
+  },
+  {
+    "id": 4,
+    "name": "Another Broken Egg",
+    "category": "American breakfast",
+    "rating": 4.6,
+    "city": "Madison, Huntsville al",
+    "notes": "Cinnamon roll pancakes!",
+    "createdBy": "Sam"
+  },
+  {
+    "id": 5,
+    "name": "Rosies",
+    "category": "Mexican",
+    "rating": 4.9,
+    "city": "Florence al, Hunstville al, Madison al",
+    "notes": "awesome salsa and cheese dip. free ice cream",
+    "createdBy": "Sam"
+  },
+  {
+    "id": 6,
+    "name": "Gutheries",
+    "category": "fast food chicken",
+    "rating": 4.4,
+    "city": "muscle shoals al, trinity al",
+    "notes": "best chicken fingers and toast. box is only 10$",
+    "createdBy": "Sam"
+  }
+]

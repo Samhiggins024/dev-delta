@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Sam's Restaurant Inventory</title>
+  <link rel="stylesheet" href="../asset/styles/terminal.css" />
+</head>
+<body data-page="signin">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="../index.html">Sam's Inventory</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="restuarant.html">Restaurants</a>
+      <a class="nav-link admin-link d-none" href="admin.html">Admin</a>
+      <button class="btn btn-link nav-link" data-action="sign-out" type="button">Sign Out</button>
+      <span id="nav-user-status" class="nav-link text-light">Not signed in</span>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <h1 class="h3 mb-3">Sign In</h1>
+            <div id="sign-in-status" class="alert alert-info mb-3">Use the developmental test accounts below.</div>
+
+            <form id="sign-in-form">
+              <div class="mb-3">
+                <label class="form-label" for="username">Username</label>
+                <input id="username" class="form-control" type="text" name="username" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input id="password" class="form-control" type="password" name="password" required />
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Sign In</button>
+            </form>
+
+            <div class="mt-4 p-3 bg-light rounded">
+              <p class="fw-semibold mb-2">Development test accounts</p>
+              <ul class="mb-0 ps-3">
+                <li><strong>Admin:</strong> username: admin | password: admin123</li>
+                <li><strong>User:</strong> username: user | password: user123</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../asset/js/app.js"></script>
+</body>
+</html>

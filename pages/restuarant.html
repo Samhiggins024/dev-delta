@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurants | Sam's Restaurant Inventory</title>
+  <link rel="stylesheet" href="../asset/styles/terminal.css" />
+</head>
+<body data-page="restaurant">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="../index.html">Sam's Inventory</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="restuarant.html">Restaurants</a>
+      <a class="nav-link admin-link d-none" href="admin.html">Admin</a>
+      <a class="nav-link" href="signin.html">Sign In</a>
+      <button class="btn btn-link nav-link" data-action="sign-out" type="button">Sign Out</button>
+      <span id="nav-user-status" class="nav-link text-light">Not signed in</span>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <section class="mb-4">
+      <h1 class="display-6">Restaurant Manager</h1>
+      <p class="text-muted mb-0">Create, update, and remove your restaurant records.</p>
+    </section>
+
+    <div id="status-message" class="alert d-none" role="alert"></div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h2 class="h4">Add or Edit</h2>
+            <form id="restaurant-form">
+              <input type="hidden" id="record-id" name="recordId" />
+
+              <div class="mb-3">
+                <label class="form-label" for="restaurant-name">Restaurant Name</label>
+                <input id="restaurant-name" class="form-control" type="text" name="name" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="restaurant-category">Category</label>
+                <select id="restaurant-category" class="form-select" name="category" required>
+                  <option value="">Select</option>
+                  <option value="American">American</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Mexican">Mexican</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Asian">Asian</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="restaurant-rating">Rating</label>
+                <input id="restaurant-rating" class="form-control" type="number" name="rating" min="1" max="5" step="0.1" value="4.5" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="restaurant-city">City</label>
+                <input id="restaurant-city" class="form-control" type="text" name="city" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="restaurant-notes">Notes</label>
+                <textarea id="restaurant-notes" class="form-control" name="notes" rows="3" required></textarea>
+              </div>
+
+              <button id="submit-restaurant" class="btn btn-primary w-100" type="submit">Add Restaurant</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h4 mb-0">Current Records</h2>
+              <span id="current-record-count" class="badge bg-secondary">0 Records</span>
+            </div>
+
+            <div id="user-summary" class="mb-3 p-3 bg-light rounded"></div>
+            <div id="restaurant-list" class="list-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../asset/js/app.js"></script>
+</body>
+</html>

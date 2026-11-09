@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Sam's Restaurant Inventory</title>
+  <link rel="stylesheet" href="../asset/styles/terminal.css" />
+</head>
+<body data-page="admin">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="../index.html">Sam's Inventory</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="restuarant.html">Restaurants</a>
+      <a class="nav-link admin-link d-none" href="admin.html">Admin</a>
+      <a class="nav-link" href="signin.html">Sign In</a>
+      <button class="btn btn-link nav-link" data-action="sign-out" type="button">Sign Out</button>
+      <span id="nav-user-status" class="nav-link text-light">Not signed in</span>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h1 class="mb-1">Admin Dashboard</h1>
+        <p class="text-muted mb-0">Inspect session state, app data, and access rules.</p>
+      </div>
+      <a class="btn btn-outline-secondary" href="../index.html">Back to Home</a>
+    </div>
+
+    <div id="status-message" class="alert d-none" role="alert"></div>
+
+    <section class="row g-4">
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h5">Current User</h3>
+            <div id="admin-user"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h5">Derived / Browser Data</h3>
+            <ul id="debug-info" class="mb-0 ps-3"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card shadow-sm border-0 mt-4">
+      <div class="card-body">
+        <h3 class="h5">Application Data</h3>
+        <div id="admin-record-list"></div>
+      </div>
+    </section>
+
+    <section class="card shadow-sm border-0 mt-4">
+      <div class="card-body">
+        <h3 class="h5">Session Storage</h3>
+        <pre id="storage-output" class="bg-dark text-light p-3 rounded mb-0">{}</pre>
+      </div>
+    </section>
+
+    <section class="card shadow-sm border-0 mt-4">
+      <div class="card-body">
+        <h3 class="h5">Complete App State</h3>
+        <pre id="app-state-output" class="bg-dark text-light p-3 rounded mb-0">{}</pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="../asset/js/app.js"></script>
+</body>
+</html>

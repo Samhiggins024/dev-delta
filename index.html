@@ -1,34 +1,76 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lab|delta</title>
-  </head>
-  <body>
-    <main>
-      <form id="profile-form">
-      <label for="nameInput">name</label>
-      <input id="nameInput" />
-      <br />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam's Restaurant Inventory</title>
+  <link rel="stylesheet" href="asset/styles/terminal.css" />
+</head>
+<body data-page="home">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="index.html">Sam's Inventory</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="pages/restuarant.html">Restaurants</a>
+      <a class="nav-link" href="pages/signin.html">Sign In</a>
+      <a class="nav-link admin-link d-none" href="pages/admin.html">Admin</a>
+      <button class="btn btn-link nav-link" data-action="sign-out" type="button">Sign Out</button>
+      <span id="nav-user-status" class="nav-link text-light">Not signed in</span>
+    </div>
+  </nav>
 
-      <label for="favoriteInput">favorite</label>
-      <select id="favoriteInput">
-        <option>select favorite!</option>
-      </select>
+  <main class="container my-5">
+    <section class="text-center mb-4">
+      <h1 class="display-5">Sam's Restaurant Inventory</h1>
+      <p class="lead text-muted mb-0">Discover the places worth revisiting.</p>
+    </section>
 
-      <br />
-      <label for="commentInput">comments</label>
-      <textarea id="commentInput"></textarea>
+    <div id="status-message" class="alert d-none" role="alert"></div>
 
-			<br /> 
+    <section class="card shadow-sm border-0 mb-4">
+      <div class="card-body">
+        <h2 class="h4">Find a Restaurant</h2>
+        <div class="row g-3 align-items-end">
+          <div class="col-md-5">
+            <label class="form-label" for="restaurant-search">Search</label>
+            <input id="restaurant-search" class="form-control" type="text" placeholder="Search by name, city, or notes" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="restaurant-category">Category</label>
+            <select id="restaurant-category" class="form-select">
+              <option value="">All Categories</option>
+              <option value="American">American</option>
+              <option value="Italian">Italian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Indian">Indian</option>
+              <option value="Asian">Asian</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="restaurant-sort">Sort by</label>
+            <select id="restaurant-sort" class="form-select">
+              <option value="">Default</option>
+              <option value="name">Name</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<button type="submit">create my profile</button>
-      </form>
-      <p id="profile-output"> Your profile will display here.</p>
-    
-      <img id="dog-image" alt="A Dog" /> 
-    </main>  
-    <script src="assets/js/script.js"></script>
-  </body>
+    <section>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Featured Restaurants</h2>
+        <a class="btn btn-primary btn-sm" href="pages/restuarant.html">Open Restaurant Manager</a>
+      </div>
+      <div id="featured-restaurants" class="row g-4"></div>
+    </section>
+  </main>
+
+  <footer class="text-center text-muted py-4">
+    <p class="mb-0">&copy; 2026 Sam's Restaurant Inventory</p>
+  </footer>
+
+  <script src="asset/js/app.js"></script>
+</body>
 </html>
